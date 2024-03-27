@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des médecins</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Liste des médecins</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Nombre de jours</th>
+                    <th>Taux journalier</th>
+                    <th>Prestation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% medecins.forEach(function(medecin) { %>
+                    <tr>
+                        <td><%= medecin.nom %></td>
+                        <td><%= medecin.nombre_de_jours %></td>
+                        <td><%= medecin.taux_journalier %></td>
+                        <td><%= medecin.nombre_de_jours * medecin.taux_journalier %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
